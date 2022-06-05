@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+</style>
+</head>
+<h2> You are seeing the projects per organization table </h2>
+<body>
+<table class = "View2_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> Organization Name </th>
+                <th> Project Title </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for view in views %}
+                <tr>
+                    <td> {{view.org_name}} </td>
+                    <td> {{view.title}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

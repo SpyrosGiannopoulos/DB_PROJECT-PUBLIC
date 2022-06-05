@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+</style>
+<h2> ALL SCIENTIFIC FIELDS </h2>
+<br>
+</head>
+<body>
+<form name= 'parseField'action="http://localhost:3000/Third_Question/MENU" method="post">
+        <label> Type the field_id of the Scientific field (should exist in table) you want to see the projects it concerns  </label>
+        <input type = "text" name = "selected_field" value = ''>
+        <a href = "Third_Question/MENU">
+        <button> Go </button>
+        </a>
+        <br>
+</form>
+        <br>
+<table class = "Fields_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> field_id </th>
+                <th> Field name </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for field in FIELDS %}
+                <tr>
+                    <td> {{field.field_id}} </td>
+                    <td> {{field.field_name}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

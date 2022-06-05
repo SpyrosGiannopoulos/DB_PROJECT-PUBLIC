@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+    .button_red {
+        background-color: #FF7F50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+    </style>
+</head>
+<h2> Dataform for Projects </h2>
+<body>
+{%if deliverables|length != 0%}
+<a href = "/Insert/Deliverables">
+        <button class="button"> Add deliverable </button>
+</a>
+{% endif %}
+<form name= 'InsertForm'action="http://localhost:3000/Projects/Insert" method="post">
+        <label> Type Project title </label>
+        <input type = "text" name = "user_title" value = ''>
+        <br>
+        <label> Type Project summary : </label>
+        <input type = "text" name = "user_summary" value = ''>
+        <br>
+        <label> Type Project funding : </label>
+        <input type = "text" name = "user_funding" value = '' >
+        <br>
+        <label> Type Project start date : </label>
+        <input type = "date" name = "user_start_date" value = ''>
+        <br>
+        <label> Type Project due date : </label>
+        <input type = "date" name = "user_due_date" value = ''>
+        <br>
+        <label> Choose the program_id of the Program to fund your project : </label>
+        <input type = "text" name = "user_program_id" value = ''>
+        <br>
+        <label> Choose the executive_id of the Executive that manages your project : </label>
+        <input type = "text" name = "user_executive_id" value = ''>
+        <br>
+        <label> Choose the organization_id of the Organization that manages your project : </label>
+        <input type = "text" name = "user_organization_id" value = ''>
+        <br>
+        <label> Choose the field_id (can be multiple,separate with comma) of the Scientific Fields that describe your project : </label>
+        <input type = "text" name = "user_field_id" value = ''>
+        <br>
+        <label> Choose the researcher_id (can be multiple,separate with comma) of the Researchers that work on your project(NOT the scientific advisor or the evaluator) : </label>
+        <input type = "text" name = "user_researcher_id" value = ''>
+        <br>
+        <label> Choose the researcher_id of the scientific advisor of your project: </label>
+        <input type = "text" name = "user_advisor_id" value = ''>
+        <br>
+        <label> Choose the researcher_id of the evaluator of your project: </label>
+        <input type = "text" name = "user_evaluator_id" value = ''>
+        <br>
+        <label> Enter the grade of your project: </label>
+        <input type = "text" name = "user_eval_grade" value = ''>
+        <br>
+        <label> Enter the date of the evaluation of your project: </label>
+        <input type = "date" name = "user_eval_date" value=''>
+        <br>
+        <input type="hidden" name="number_of_del" value='{{deliverables}}'>
+        <input type="submit" class = "button_red" name = "submit">
+</form>
+        <a href = "/ShowAllPrograms">
+                <button > Show All Programs </button>
+        </a>
+        <a href = "/ShowAllExecutives">
+                <button > Show All Executives </button>
+        </a>
+        <a href = "/ShowAllOrganizations">
+                <button > Show All Organizations </button>
+        </a>
+        <a href = "/ShowAllFields">
+                <button > Show All Scientific Fields </button>
+        </a>
+         <a href = "/ShowAllResearchers">
+                <button > Show All Researchers </button>
+        </a>
+        <br>
+
+</body>
+</html>

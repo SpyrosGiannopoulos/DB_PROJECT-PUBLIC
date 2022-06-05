@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<form name= 'DeleteForm'action="http://localhost:3000/Projects/Delete" method="post">
+    <label  style="font-size: 20px"> Type the project_id of the Project you would like to delete : </label>
+    <input type = "text" name ="user_project_id" value = '' required>
+    <input type="submit" name="submit">
+</form>
+<a href = "/ShowAllProjects">
+    <button class = "button"> See Projects </button>
+</a>
+</body>
+</html>

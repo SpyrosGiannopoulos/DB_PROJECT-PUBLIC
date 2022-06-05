@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 32px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+        body {background-color : powderblue;}
+    </style>
+</head>
+<body>
+    <a href = "/First_Question/Programs">
+    <button class="button"> ALL PROGRAMS </button>
+    </a>
+    <br>
+    <br>
+    <form name= 'parsedata'action="http://localhost:3000/First_Question" method="post">
+        <label> 1st Criterio ) Type Date: </label>
+        <input type = "date" name = "user_date" value = ''>
+        <input type ="submit" name = "submit">
+        <br>
+        <br>
+        <label> 2nd Criterio ) Select the duration of project : </label>
+        <input type = "radio" name = "duration" value = "one_year"/> 1-2 YEARS
+        <input type = "radio" name = "duration" value = "two_year"/> 2-3 YEARS
+        <input type = "radio" name = "duration" value = "three_year"/> 3-4 YEARS
+        <input type ="submit" name = "submit">
+        <br>
+        <br>
+    </form>
+    <label> 3rd Criterio ) Select the executive of project : </label>
+        <a href = "/First_Question/Executives">
+        <button> SHOW ALL EXECUTIVES TO CHOOSE FROM </button>
+        </a>
+</body>
+</html>

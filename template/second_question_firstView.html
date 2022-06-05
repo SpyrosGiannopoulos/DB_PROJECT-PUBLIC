@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+</style>
+</head>
+<h2> You are looking at the projects per researcher table </h2>
+<body>
+<table class = "View_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> First Name </th>
+                <th> Last Name </th>
+                <th> Project Title </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for view in views %}
+                <tr>
+                    <td> {{view.first_name}} </td>
+                    <td> {{view.last_name}} </td>
+                    <td> {{view.title}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

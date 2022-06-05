@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+</style>
+<h2> Researchers who work on 5 or more projects with no deliverables </h2>
+</head>
+<body>
+<table class = "Researchers_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> researcher_id </th>
+                <th> First name </th>
+                <th> Last name</th>
+                <th> number of projects </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for researcher in researchers %}
+                <tr>
+                    <td> {{researcher.researcher_id}} </td>
+                    <td> {{researcher.first_name}} </td>
+                    <td> {{researcher.last_name}} </td>
+                    <td> {{researcher.counter}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

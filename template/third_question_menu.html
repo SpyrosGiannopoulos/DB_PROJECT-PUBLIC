@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 32px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<h3> Choose between the projects concerning selected field {{FIELD}} or the researchers who work on it for the past year </h3>
+</head>
+<body>
+<form name= 'parseProject'action="http://localhost:3000/Third_Question/MENU/ShowProjects" method="post">
+        <input type="hidden" name = 'selected_field' value = {{FIELD}}>
+        <a href = "Third_Question/MENU/ShowProjects">
+        <button class="button">  SHOW PROJECTS  </button>
+        </a>
+        <br>
+</form>
+<form name= 'parseResearchers'action="http://localhost:3000/Third_Question/MENU/ShowResearchers" method="post">
+        <input type="hidden" name = 'selected_field' value = {{FIELD}}>
+        <a href = "Third_Question/MENU/ShowResearchers">
+        <button class="button"> SHOW RESEARCHERS </button>
+        </a>
+        <br>
+</form>
+</body>
+</html>

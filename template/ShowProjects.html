@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+  border:1px solid black;
+}
+</style>
+    <h2> ALL PROJECTS </h2>
+</head>
+<body>
+    {% if projects|length == 0 %}
+    <h3> No projects found ... </h3>>
+    {% else %}
+    <table class = "Projects_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> project_id </th>
+                <th> Project title </th>
+                <th> Project summary</th>
+                <th>  Project funding </th>
+                <th> Project start date </th>
+                <th> Project due date  </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td> {{project.project_id}} </td>
+                    <td> {{project.title}} </td>
+                    <td> {{project.summary}} </td>
+                    <td> {{project.funding}} </td>
+                    <td> {{project.start_date}} </td>
+                    <td> {{project.due_date}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+
+</html>

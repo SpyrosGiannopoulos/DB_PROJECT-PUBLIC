@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+</style>
+<h2> Researchers working on the selected field with field_id = {{FIELD}} in the past year </h2>
+</head>
+<body>
+{% if researchers|length == 0 %}
+<h3> No available projects found .... </h3>
+{% else %}
+<table class = "Researchers_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> researcher_id </th>
+                <th> First Name </th>
+                <th> Last Name </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for researcher in researchers %}
+                <tr>
+                    <td> {{researcher.researcher_id}} </td>
+                    <td> {{researcher.first_name}} </td>
+                    <td> {{researcher.last_name}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+</body>
+</html>

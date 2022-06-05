@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 32px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+        body {background-color : powderblue;}
+    </style>
+</head>
+<body>
+<form name= 'parsedata'action="http://localhost:3000/Organizations/Insert/SelectType" method="post">
+        <label style="font-size:20px" > Choose the type of Organization : </label>
+        <input type = "radio" name = "Org_type" value = "University"/> University
+        <input type = "radio" name = "Org_type" value = "Research_Centre"/> Research Centre
+        <input type = "radio" name = "Org_type" value = "Company"/> Company
+        <br>
+        <input type ="submit" name = "submit">
+        <br>
+        <br>
+    </form>
+</body>
+</html>

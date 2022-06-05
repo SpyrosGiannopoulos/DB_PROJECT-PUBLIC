@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Dataform for Program </h2>
+<body>
+<form name= 'InsertForm'action="http://localhost:3000/Programs/Insert" method="post">
+    <label> Type Program name </label>
+        <input type = "text" name = "user_name" value = '' required>
+        <br>
+        <label> Type Department name : </label>
+        <input type = "text" name = "user_dept_name" value = ''>
+        <br>
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllExecutives">
+    <button class ="button"> All Executives </button>
+</a>
+</body>
+</html>

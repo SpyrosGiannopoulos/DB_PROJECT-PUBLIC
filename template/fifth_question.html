@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+        body {background-color : powderblue}
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    <h1> PAIRS OF SCIENTIFIC FIELDS </h1>
+</head>
+<body>
+<table class = "pairs_of_fields_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> Scientific field A </th>
+                <th> Scientific field B </th>
+                <th> Frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    <td> {{result.FieldA}} </td>
+                    <td> {{result.FieldB}} </td>
+                    <td> {{result.counter}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

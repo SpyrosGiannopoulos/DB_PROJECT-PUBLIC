@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+  border:1px solid black;
+}
+</style>
+    <h2> ALL RESEARCHERS </h2>
+</head>
+<body>
+    {% if researchers|length == 0 %}
+    <h3> No researchers found ... </h3>>
+    {% else %}
+    <table class = "Researchers_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> researcher_id </th>
+                <th> First name </th>
+                <th> Last name</th>
+                <th>  Sex </th>
+                <th> date of birth </th>
+                <th> organization_id </th>
+                <th> date of recruitment </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for researcher in researchers %}
+                <tr>
+                    <td> {{researcher.researcher_id}} </td>
+                    <td> {{researcher.first_name}} </td>
+                    <td> {{researcher.last_name}} </td>
+                    <td> {{researcher.sex}} </td>
+                    <td> {{researcher.date_of_birth}} </td>
+                    <td> {{researcher.organization_id}} </td>
+                    <td> {{researcher.date_of_recruitment}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+
+</html>

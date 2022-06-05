@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<form name= 'UpdateForm'action="http://localhost:3000/Organizations/Update/Location" method="post">
+    <label  style="font-size: 20px"> Type the organization_id of the Organization you would like to update : </label>
+    <input type = "text" name ="user_org_id" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the city location : </label>
+    <input type = "text" name="user_city" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the street name : </label>
+    <input type = "text" name="user_street_name" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the street number : </label>
+    <input type = "text" name="user_street_number" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the zip code : </label>
+    <input type = "text" name="user_zip_code" value = '' required>
+    <br>
+    <input type="submit" name="submit">
+</form>
+<a href = "/ShowAllOrganizations">
+    <button class = "button"> See Organizations </button>
+</a>
+</body>
+</html>

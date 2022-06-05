@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color : powderblue}
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    <h1> SELECTED PROJECTS </h1>
+</head>
+<body>
+<form name= 'parseProject'action="http://localhost:3000/First_Question/Researchers" method="post">
+        <label> Type the project_id of the project (should exist in table) you want to see the researchers  </label>
+        <input type = "text" name = "selected_project" value = ''>
+        <a href = "/First_Question/Researchers">
+        <button> Search Projects </button>
+        </a>
+        <br>
+</form>
+<table class = "Projects_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> project_id </th>
+                <th> Title </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td> {{project.project_id}} </td>
+                    <td> {{project.title}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

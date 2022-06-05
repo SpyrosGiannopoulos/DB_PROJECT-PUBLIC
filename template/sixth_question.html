@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+        body {background-color : powderblue}
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    <h2> RESEARCHERS UNDER THE AGE OF 40 AND THE NUMBER OF PROJECTS THEY WORK ON </h2>
+</head>
+<body>
+<table class = "Researchers_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> researcher_id </th>
+                <th> First name </th>
+                <th> Last name</th>
+                <th> Project counter</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    <td> {{result.r_id}} </td>
+                    <td> {{result.r_fn}} </td>
+                    <td> {{result.r_ln}} </td>
+                    <td> {{result.s_pr}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

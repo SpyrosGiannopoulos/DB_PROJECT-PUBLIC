@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+    .button_red {
+        background-color: #FF7F50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+    </style>
+</head>
+<body>
+<form name= 'DeliverablesForm'action="http://localhost:3000/Insert/Deliverables" method="post">
+    <label style="font-size: 20px"> Type the deliverable title for your deliverable  : </label>
+    <input type = "text" name = "user_del_title" value = ''>
+    <br>
+    <label style="font-size: 20px"> Type the deliverable summary for your deliverable : </label>
+    <input type = "text" name = "user_del_summary" value = ''>
+    <br>
+    <label style="font-size: 20px"> Type the deliverable date for your deliverable : </label>
+    <input type = "date" name = "user_del_date" value = ''>
+    <br>
+    <input type="hidden" name="number_of_del" value='{{deliverables}}'>
+    <input type="submit" name = "submit">
+</form>
+</body>
+</html>

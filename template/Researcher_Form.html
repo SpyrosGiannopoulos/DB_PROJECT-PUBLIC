@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Dataform for Researcher </h2>
+<body>
+<form name= 'InsertForm'action="http://localhost:3000/Researchers/Insert" method="post">
+    <label> Type First name </label>
+        <input type = "text" name = "user_first_name" value = '' required>
+        <br>
+        <label> Type Last name : </label>
+        <input type = "text" name = "user_last_name" value = '' required>
+        <br>
+        <label> Type sex (M for male and F for female) : </label>
+        <input type = "text" name = "user_sex" value = '' >
+        <br>
+        <label> Select his/hers date of birth </label>
+        <input type = "date" name = "user_date_of_birth" value = '' required>
+        <br>
+        <label> Select the organization_id of the organization he/she works for : </label>
+        <input type = "text" name = "user_organization_id" value = '' required>
+        <br>
+        <label> Select his/hers date of recruitment </label>
+        <input type = "date" name = "user_date_of_recruitment" value = '' required>
+        <br>
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllOrganizations">
+    <button class ="button"> All Organizations </button>
+</a>
+</body>
+</html>

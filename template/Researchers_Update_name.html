@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Alter Researcher's name </h2>
+<body>
+<form name= 'nameForm'action="http://localhost:3000/Researchers/Update/Name" method="post">
+    <label> Type the researcher_id of the existing Researcher </label>
+        <input type = "text" name = "user_researcher_id" value = '' required>
+        <br>
+        <label> Alter first name to : </label>
+        <input type = "text" name = "user_first_name" value = ''>
+        <br>
+        <label> Alter last name to : </label>
+        <input type = "text" name = "user_last_name" value = ''>
+        <br>
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllResearchers">
+    <button class ="button"> All Researchers </button>
+</a>
+</body>
+</html>

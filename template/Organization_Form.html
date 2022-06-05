@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Dataform for Organization </h2>
+<body>
+<form name= 'InsertForm'action="http://localhost:3000/Organizations/Insert" method="post">
+    <label> Type Organization name </label>
+        <input type = "text" name = "user_name" value = '' required>
+        <br>
+        <label> Type Organization's city location : </label>
+        <input type = "text" name = "user_city" value = '' required>
+        <br>
+        <label> Type the street's name : </label>
+        <input type = "text" name = "user_street_name" value = '' >
+        <br>
+        <label> Type the street's number : </label>
+        <input type = "text" name = "user_street_number" value = '' required>
+        <br>
+        <label> Type the zip code : </label>
+        <input type = "text" name = "user_zip_code" value = '' required>
+        <br>
+        <label> Type the organization's abbreviation : </label>
+        <input type = "text" name = "user_abbreviation" value = '' required>
+        <br>
+        <label> Type the organization's phone number (if multiple separate with comma) : </label>
+        <input type = "text" name = "user_phone_number" value = '' required>
+        <br>
+        {% if check_type|length == 1 %}
+            <label> Type Ministry of Education funding </label>
+            <input type = "text" name = "user_uni_fund" value = '' required>
+            <br>
+        {%  endif  %}
+        {% if check_type|length == 2 %}
+            <label> Type Ministry of Education funding : </label>
+            <input type = "text" name = "user_ministry_fund" value = '' required>
+            <br>
+            <label> Type private activities funding : </label>
+            <input type = "text" name = "user_private_fund" value = '' required>
+            <br>
+        {% endif %}
+        {% if check_type|length == 3 %}
+            <label> Type Own Funds : </label>
+            <input type = "text" name = "user_own_fund" value = '' required>
+            <br>
+        {% endif %}
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllOrganizations">
+    <button class ="button"> All Organizations </button>
+</a>
+</body>
+</html>

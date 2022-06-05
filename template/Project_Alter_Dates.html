@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {background-color : powderblue}
+table, th, td {
+border:1px solid black;
+}
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<form name= 'UpdateForm'action="http://localhost:3000/Projects/Update/Alter_Dates" method="post">
+    <label  style="font-size: 20px"> Type the project_id of the Project you would like to update : </label>
+    <input type = "text" name ="user_project_id" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the new start date : </label>
+    <input type = "date" name="user_start_date" value = '' required>
+    <br>
+    <label  style="font-size: 20px"> Type the new due date : </label>
+    <input type = "date" name="user_due_date" value = '' required>
+    <br>
+    <input type="submit" name="submit">
+</form>
+<a href = "/ShowAllProjects">
+    <button class = "button"> See Projects </button>
+</a>
+</body>
+</html>

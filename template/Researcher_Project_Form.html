@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Add Working Relationship </h2>
+<body>
+<form name= 'InsertForm'action="http://localhost:3000/Researchers/Update/Project" method="post">
+    <label> Type the researcher_id of the existing Researcher </label>
+        <input type = "text" name = "user_researcher_id" value = '' required>
+        <br>
+        <label> Type the project_id of the project  : </label>
+        <input type = "text" name = "user_project_id" value = '' required>
+        <br>
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllProjects">
+    <button class ="button"> All Projects </button>
+</a>
+</body>
+</html>

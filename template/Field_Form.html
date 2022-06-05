@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 26px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    body {background-color : powderblue;}
+   </style>
+</head>
+<h2> Dataform for Scientific field </h2>
+<body>
+<form name= 'InsertForm'action="http://localhost:3000/Fields/Insert" method="post">
+    <label> Type Scientific field name </label>
+        <input type = "text" name = "user_name" value = ''>
+        <br>
+        <input type="submit" name="submit">
+</form>
+<a href="/ShowAllFields">
+    <button class ="button"> All Fields </button>
+</a>
+</body>
+</html>

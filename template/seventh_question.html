@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color : powderblue}
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    <h2> TOP 5 EXECUTIVES BASED ON THEIR FUNDING </h2>
+</head>
+<body>
+<table class = "Executives_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> executive_id </th>
+                <th> First name </th>
+                <th> Last name</th>
+                <th> Total Funds </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for executive in executives %}
+                <tr>
+                    <td> {{executive.executive_id}} </td>
+                    <td> {{executive.executive_first_name}} </td>
+                    <td> {{executive.executive_last_name}} </td>
+                    <td> {{executive.Total_funds}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

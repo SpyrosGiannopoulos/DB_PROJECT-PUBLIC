@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color : powderblue}
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    <h1> ALL EXECUTIVES </h1>
+</head>
+<body>
+<form name= 'parseExecutive'action="http://localhost:3000/First_Question/Executives/Exec-Proj" method="post">
+        <label> Type the executive_id of the Executive (should exist in table) to see the projects they manage  </label>
+        <input type = "text" name = "selected_executive" value = ''>
+        <a href = "/First_Question/Executives/Exec-Proj">
+        <button> Search Projects </button>
+        </a>
+        <br>
+</form>
+<table class = "Executives_table" style="width:100%">
+        <thead>
+            <tr>
+                <th> executive_id </th>
+                <th> First name </th>
+                <th> Last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for executive in executives %}
+                <tr>
+                    <td> {{executive.executive_id}} </td>
+                    <td> {{executive.executive_first_name}} </td>
+                    <td> {{executive.executive_last_name}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
