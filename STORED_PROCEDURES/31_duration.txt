@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `31_duration`(duration int)
+BEGIN
+SET @project_duration= DATE_SUB(CURRENT_DATE(),INTERVAL -duration YEAR) - CURRENT_DATE() ; 
+SET @project_duration_1= DATE_SUB(CURRENT_DATE(),INTERVAL 1-duration YEAR) - CURRENT_DATE() ; 
+SELECT project_id, title FROM PROJECTS WHERE (due_date-start_date)<@project_duration AND due_date-start_date>@project_duration_1;
+END

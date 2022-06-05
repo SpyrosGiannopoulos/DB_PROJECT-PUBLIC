@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `32_proj_research`()
+BEGIN
+DROP VIEW if exists proj_research;
+
+CREATE VIEW proj_research AS
+SELECT p.project_id, r.researcher_id, p.title, r.first_name, r.last_name
+FROM projects p INNER JOIN researchers r ON p.researcher_id=r.researcher_id
+UNION
+SELECT p.project_id, r.researcher_id, p.title, r.first_name, r.last_name
+FROM projects p INNER JOIN works_on w ON p.project_id=w.project_id
+INNER JOIN researchers r ON w.researcher_id=r.researcher_id
+ORDER BY researcher_id;
+ 
+ SELECT first_name, last_name, title FROM proj_research;
+END
